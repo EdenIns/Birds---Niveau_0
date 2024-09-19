@@ -47,8 +47,7 @@ const onSubmit = (event) => {
     };
     try {
         const addedArticle = Articles.createArticle(newArticle);
-        console.log(addedArticle);
-        alert("Article ajouté");
+        alert("L'article vient d'être posté.");
     } catch {
         alert("Impossible d'ajouter l'article");
     };

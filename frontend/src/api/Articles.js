@@ -7,7 +7,7 @@ export default class Articles {
           const response = await axios.get(`${BASE_URL}/article`);
           return response.data;
         } catch (error) {
-          console.error("Error fetching articles:", error);
+          console.error("Erreur lors de la récuperation des articles:", error);
           throw error;
         }
       }
@@ -21,11 +21,9 @@ export default class Articles {
             imageUrl: newArticle.imageUrl,
             userId: "12345"
           });
-          alert("Nouvelle adresse ajouté")
-          console.log(response);
           return response.data;
         } catch (error) {
-          console.error("Erreur lors de l'ajout de la nouvelle adresse :", error);
+          console.error("Erreur lors de l'ajout de l'article :", error);
           throw error;
         }
       }
