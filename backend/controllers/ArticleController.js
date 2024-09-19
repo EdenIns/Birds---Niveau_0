@@ -21,3 +21,9 @@ exports.getArticles = (req, res) => {
     .then((articles) => res.status(200).json(articles))
     .catch((error) => res.status(400).json({ error }));
 };
+
+exports.deleteArticle = (req, res) => {
+  Article.deleteOne({ _id: req.params.id })
+    .then(() => res.status(200).json({ message: 'Article supprimé !'}))
+    .catch(error => res.status(400).json({ error }));
+};
