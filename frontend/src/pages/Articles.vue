@@ -9,12 +9,13 @@
                     <p>{{ article.description }}</p>
                 </BCardBody>
             </BCard>
+            <BButton><router-link to="addNewArticle">Ajouter un nouvel article</router-link></BButton>
         </main>
     </div>
 </template>
 
 <script setup>
-import { BCard, BCardImg, BCardTitle, BCardBody } from 'bootstrap-vue-next';
+import { BCard, BCardImg, BCardTitle, BCardBody, BButton } from 'bootstrap-vue-next';
 import Articles from "../api/Articles";
 import { onMounted, ref } from 'vue';
 
